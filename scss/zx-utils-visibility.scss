@@ -1,0 +1,15 @@
+/// The base value used to calculate the rem value from.
+/// @type size
+$zx-rem-base: 16px !default;
+
+@import "functions/zx-strip-unit";
+@import "functions/zx-convert-to-rem";
+@import "functions/zx-rem-calc";
+
+/// A mixin that sets the box-sizing in a browser independent way.
+/// @param {string} $type The type of box-sizing to set.
+@mixin zx-box-sizing($type: border-box) {
+  -webkit-box-sizing: $type;
+  -moz-box-sizing: $type;
+  box-sizing: $type;
+}
